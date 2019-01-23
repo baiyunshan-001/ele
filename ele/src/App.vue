@@ -11,7 +11,15 @@ export default {
 </script>
 
 <style>
-  body {
+  * {
     margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: .3rem;
+    box-sizing: border-box;
   }
+  ul,li{
+    list-style: none;
+  }
+  
 </style>

@@ -5,6 +5,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 import Index from './views/Index'
 import cities from './views/cities'
+import city from './views/city'
 export default new Router({
  
   routes: [
@@ -14,8 +15,11 @@ export default new Router({
     },
     {
       path:'/v1/cities',
-      component:cities
+      component:cities,
+    },
+    {
+      path:'/v1/cities/:id',
+      component:city
     }
-   
   ]
 })

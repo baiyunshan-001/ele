@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div @click="setAddress">收货地址</div>
+        <div @click="setAddress">{{addr.name}}</div>
     </div>
 </template>
 
@@ -11,8 +11,11 @@ export default {
            this.$router.push('/v1/cities')
        }
     },
+  
     computed:{
-        
+        addr(){
+            return this.$store.state.city.addr
+        }
     }
 }
 </script>
