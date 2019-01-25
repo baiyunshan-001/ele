@@ -21,5 +21,7 @@ export default {
   ul,li{
     list-style: none;
   }
-  
+  body{
+    background: #f5f5f5;
+  }
 </style>

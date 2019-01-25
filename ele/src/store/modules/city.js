@@ -12,7 +12,9 @@ export default{
         },
         cityRes:[],
         addr:{
-            name:'未选择收货地址'
+            name:'未选择收货地址',
+            latitude:'',
+            longitude:''
         }
     },
 	actions:{
@@ -33,7 +35,7 @@ export default{
         },
         getCity({commit},id){
             axios.get('v1/cities/'+id).then(res=>{
-                console.log(res.data)
+            
                 commit('getCity',res.data)
             })
         },
@@ -45,11 +47,9 @@ export default{
                     keyword
                 }
             }).then(res=>{
-                console.log(res.data)
                 commit('search',res.data)
             })
-            
-        }
+        },
     },	
 	mutations:{
 		getHot(state,hotCity){

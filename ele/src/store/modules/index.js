@@ -1,0 +1,35 @@
+import axios from '../../axios'
+export default{
+	namespaced:true,
+	state:{
+    entry:[],
+    shopList:[]
+  },
+	actions:{
+    entry({commit}){
+      axios.get('/v2/index_entry').then(res=>{
+        commit('entry',res.data)
+      })
+    },
+    getList({commit},{latitude,longitude,limit}){ 
+      axios.get('http://elm.cangdu.org/shopping/restaurants',{
+          params:{
+              latitude,
+              longitude,
+              limit
+          }
+      }).then(res=>{
+          console.log(res.data)
+          commit('getList',res.data)
+      })
+    }
+  },	
+	mutations:{
+		entry(state,entry){
+      state.entry=entry
+    },
+    getList(state,shopList){
+      state.shopList=shopList
+    }
+	}
+}

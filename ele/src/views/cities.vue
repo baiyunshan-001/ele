@@ -1,8 +1,11 @@
 <template>
     <div class="cities">
         <top>
+            <router-link slot='to' tag='span' to='/' >
+                 <img src="../../public/gao-img/arrow.png" alt="">
+            </router-link>
             选择收货地址
-            <a slot='control'>新增地址</a>
+            <span slot='control'>新增地址</span>
         </top>
         <div class="cons">
             <now-city></now-city>
@@ -31,5 +34,7 @@ export default {
     }
     .cons{
         padding: 0 10px;
+        padding-top:0.96rem;
+        background: #fff;
     }
 </style>

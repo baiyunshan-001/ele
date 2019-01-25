@@ -1,6 +1,9 @@
 <template>
   <div class="city-main">
     <top>
+        <router-link slot='to' to='/v1/cities' tag='span' >
+           <img src="../../public/gao-img/arrow.png" alt="">
+        </router-link>
         {{city.name}}
         <a slot='control'>切换城市</a>
     </top>
@@ -69,6 +72,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-bottom: 0.3rem;
+    padding-top: 1.2rem;
   }
   .sea-box input{
     outline:none;

@@ -6,6 +6,7 @@ Vue.use(Router)
 import Index from './views/Index'
 import cities from './views/cities'
 import city from './views/city'
+import Login from './views/Login'
 export default new Router({
  
   routes: [
@@ -20,6 +21,9 @@ export default new Router({
     {
       path:'/v1/cities/:id',
       component:city
+    },{
+      path:'/v2/login',
+      component:Login
     }
   ]
 })
